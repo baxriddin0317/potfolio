@@ -57,8 +57,6 @@ import { Navigation, Pagination } from 'swiper';
 
 // icons
 import { FaQuoteLeft } from 'react-icons/fa';
-// next image
-import Image from 'next/image';
 
 const TestimonialSlider = () => {
   return (

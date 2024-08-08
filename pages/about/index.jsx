@@ -1,5 +1,16 @@
 import React, { useState } from 'react';
 
+// components
+import Circles from '../../components/Circles';
+
+// framer motion
+import { motion } from 'framer-motion';
+import { fadeIn } from '../../variants';
+
+// counter
+import CountUp from 'react-countup';
+
+
 // icons
 import {
   FaHtml5,
@@ -18,25 +29,57 @@ import {
 import { BiLogoTypescript } from "react-icons/bi";
 
 //  about data
-export const aboutData = [
+const aboutData = [
   {
     title: 'skills',
     info: [
       {
         title: 'Web Development',
         icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaReact />,
-          <SiNextdotjs />,
-          <SiFramer />,
-          <BiLogoTypescript />
+          {
+            id: 1,
+            icon: <FaHtml5 />
+          },
+          {
+            id: 2,
+            icon: <FaCss3 />
+          },
+          {
+            id: 3,
+            icon: <FaJs />
+          },
+          {
+            id: 4,
+            icon: <FaReact />
+          },
+          {
+            id: 5,
+            icon: <SiNextdotjs />
+          },
+          {
+            id: 6,
+            icon: <SiFramer />
+          },
+          {
+            id: 7,
+            icon: <BiLogoTypescript />
+          }  
         ],
       },
       {
         title: 'UI/UX Design',
-        icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
+        icons: [{
+          id: 9,
+          icon: <FaFigma />
+        },
+        {
+          id: 10,
+          icon: <SiAdobexd />
+        },
+        {
+          id: 11,
+          icon: <SiAdobephotoshop />
+        }],
       },
     ],
   },
@@ -55,33 +98,12 @@ export const aboutData = [
   },
 ];
 
-// components
-import Avatar from '../../components/Avatar';
-import Circles from '../../components/Circles';
-
-// framer motion
-import { motion } from 'framer-motion';
-import { fadeIn } from '../../variants';
-
-// counter
-import CountUp from 'react-countup';
-
 const About = () => {
   const [index, setIndex] = useState(0);
   console.log(index);
   return (
     <div className='h-full bg-primary/30 py-32 text-center xl:text-left'>
       <Circles />
-      {/* avatar img */}
-      <motion.div
-        variants={fadeIn('right', 0.2)}
-        initial='hidden'
-        animate='show'
-        exit='hidden'
-        className='hidden xl:flex absolute bottom-0 -left-[370px]'
-      >
-        <Avatar />
-      </motion.div>
       <div className='container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6'>
         {/* text */}
         <div className='flex-1 flex flex-col justify-center'>
@@ -101,7 +123,7 @@ const About = () => {
             exit='hidden'
             className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'
           >
-            3 years ago, I embarked on my journey as a front-end developer. Since then, I've collaborated with startups, agencies, and enterprises to build responsive, user-friendly web applications that captivate audiences and deliver seamless experiences.
+            3 years ago, I embarked on my journey as a front-end developer. Since then, I&apos;ve collaborated with startups, agencies, and enterprises to build responsive, user-friendly web applications that captivate audiences and deliver seamless experiences.
           </motion.p>
           {/* counters */}
           <motion.div
@@ -179,8 +201,8 @@ const About = () => {
                   <div>{item.stage}</div>
                   <div className='flex gap-x-4'>
                     {/* icons */}
-                    {item.icons?.map((icon, itemIndex) => {
-                      return <div key={itemIndex} className='text-2xl text-white'>{icon}</div>;
+                    {item.icons?.map((i, itemIndex) => {
+                      return <div key={i.id} className='text-2xl text-white'>{i.icon}</div>;
                     })}
                   </div>
                 </div>
