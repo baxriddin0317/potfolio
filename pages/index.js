@@ -36,9 +36,7 @@ const Home = () => {
             exit='hidden'
             className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16'
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
-            nostrum quam reprehenderit vero, tenetur voluptatem nulla aut
-            aspernatur dolores ut.
+            Delivering precise and detailed implementations of design with a focus on quality and consistency.
           </motion.p>
           {/* btn */}
           <div className='flex justify-center xl:hidden relative'>
