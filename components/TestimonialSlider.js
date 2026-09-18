@@ -1,46 +1,40 @@
 // testimonial slider data
 export const testimonialSlider = [
   {
-    image: '/t-avt-1.png',
     name: 'jeytehagaley',
     position: 'United States',
     message:
-      'Really happy with the quality of work and effort I received. I`ll be coming back for any of my Frontend needs.',
+      'Really happy with the quality of work and effort I received. I’ll be coming back for any of my Frontend needs.',
   },
   {
-    image: '/t-avt-2.png',
     name: 'mahomet89',
     position: 'Belgium',
     message:
       'Worked together for the second time. Really nice guy and very quickly in response.',
   },
   {
-    image: '/t-avt-3.png',
     name: 'danielfank',
     position: 'Switzerland',
     message:
       'Great service thanks',
   },
   {
-    image: '/t-avt-3.png',
     name: 'jbnl85',
     position: 'Netherlands',
     message:
       'Nice and fast reaction. First order, we where very curious about the quality of coding. This was almost perfect (90%). The little amount of feedback fixed the same day in a couple of hours. When we need more we will definitely come back. Thank you!',
   },
   {
-    image: '/t-avt-3.png',
     name: 'stuffcoolk',
     position: 'Canada',
     message:
       'Fast and professional delivery while following good code practices & web standards. Highly recommend!',
   },
   {
-    image: '/t-avt-3.png',
     name: 'shareef301',
     position: 'Maldives',
     message:
-      'easy to work with. it`s like i know him for years. very easy to communicate with. hope to do more projects with the seller.',
+      'easy to work with. it’s like i know him for years. very easy to communicate with. hope to do more projects with the seller.',
   },
 ];
 

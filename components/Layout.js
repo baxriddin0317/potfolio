@@ -1,5 +1,5 @@
 // fonts
-import { Sora } from '@next/font/google';
+import { Sora } from 'next/font/google';
 
 // font settings
 const sora = Sora({
@@ -12,6 +12,7 @@ const sora = Sora({
 import Nav from '../components/Nav';
 import Header from '../components/Header';
 import TopLeftImg from '../components/TopLeftImg';
+import ChatWidget from '../components/ChatWidget';
 
 const Layout = ({ children }) => {
   return (
@@ -22,6 +23,7 @@ const Layout = ({ children }) => {
       <Nav />
       <Header />
       {children}
+      <ChatWidget />
     </div>
   );
 };

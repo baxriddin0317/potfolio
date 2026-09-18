@@ -46,10 +46,11 @@ const Nav = () => {
           return (
             <Link
               className={`${
-                link.path === pathname && 'text-accent'
+                link.path === pathname ? 'text-accent' : ''
               } relative flex items-center group hover:text-accent transition-all duration-300`}
               href={link.path}
               key={index}
+              aria-label={link.name}
             >
               {/* tooltip */}
               <div className='absolute pr-14 right-0 hidden xl:group-hover:flex'>

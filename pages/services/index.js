@@ -2,6 +2,7 @@
 import ServiceSlider from '../../components/ServiceSlider';
 import Bulb from '../../components/Bulb';
 import Circles from '../../components/Circles';
+import Seo from '../../components/Seo';
 
 // framer motion
 import { motion } from 'framer-motion';
@@ -10,6 +11,7 @@ import { fadeIn } from '../../variants';
 const Services = () => {
   return (
     <div className='h-full bg-primary/30 py-36 flex items-center'>
+      <Seo title='Services' />
       <Circles />
       <div className='container mx-auto'>
         <div className='flex flex-col xl:flex-row gap-x-8'>
@@ -22,7 +24,7 @@ const Services = () => {
               exit='hidden'
               className='h2 xl:mt-8'
             >
-              My services <span className='text-accent'>.</span>
+              How I can <span className='text-accent'>help.</span>
             </motion.h2>
             <motion.p
               variants={fadeIn('up', 0.4)}
@@ -31,7 +33,7 @@ const Services = () => {
               exit='hidden'
               className='mb-4 max-w-[400px] mx-auto lg:mx-0'
             >
-             As a web developer specializing in front-end, I offer a comprehensive range of services designed to create visually compelling, highly responsive, and user-friendly web applications.
+              Everything you need to launch and grow your product — from the first Figma screen to a polished, AI-powered app that feels fast and effortless for your users.
             </motion.p>
           </div>
 

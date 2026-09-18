@@ -2,6 +2,7 @@
 import WorkSlider from '../../components/WorkSlider';
 import Bulb from '../../components/Bulb';
 import Circles from '../../components/Circles';
+import Seo from '../../components/Seo';
 
 // framer motion
 import { motion } from 'framer-motion';
@@ -10,6 +11,7 @@ import { fadeIn } from '../../variants';
 const Work = () => {
   return (
     <div className='h-full bg-primary/30 py-36 flex items-center'>
+      <Seo title='Work' />
       <Circles />
       <div className='container mx-auto'>
         <div className='flex flex-col xl:flex-row gap-x-8'>
@@ -22,7 +24,7 @@ const Work = () => {
               exit='hidden'
               className='h2 xl:mt-12'
             >
-              My work <span className='text-accent'>.</span>
+              Selected <span className='text-accent'>work.</span>
             </motion.h2>
             <motion.p
               variants={fadeIn('up', 0.4)}
@@ -31,8 +33,7 @@ const Work = () => {
               exit='hidden'
               className='mb-4 max-w-[400px] mx-auto lg:mx-0'
             >
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. A
-              eveniet dignissimos distinctio tempore harum laudantium.
+              A few products I&apos;ve brought to life — SaaS websites, fintech tools and landing pages crafted with care. Hover to explore, click to see them live.
             </motion.p>
           </div>
 
